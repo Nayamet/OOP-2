@@ -5,7 +5,25 @@ namespace lab_2_1
     class Program
     {
         static void Main(string[] args)
-        {
+        {   //1
+            for(int i=1;i<=50;i++)
+            {
+                if (i % 2 == 0)
+                    Console.Write(i + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            //3 
+            for (int k=1;k<=5;k++)
+            {
+                for(int j=k;j<k+5;j++)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.WriteLine();
+            }
+            //4
+            Console.WriteLine();
             int sum1=0, sum2=0;
             for(int i=1;i<=100;i++)
             {
@@ -21,7 +39,7 @@ namespace lab_2_1
             Console.WriteLine("Sum of odd number (1-100): " + sum2);
             Console.WriteLine("Sum of even number(1-100) : " + sum1);
             Console.WriteLine();
-
+            //5
             for (int i=1;i<=5;i++)
             {
                 Console.WriteLine(i);
@@ -31,6 +49,7 @@ namespace lab_2_1
                 }
             }
             Console.WriteLine();
+            //6
             int a = 5,sum=1;
             for(int i=5;i>0;i--)
             {
@@ -38,6 +57,7 @@ namespace lab_2_1
             }
             Console.WriteLine(a + "! = " + sum);
             Console.WriteLine();
+            //7
             for (int i = 1; i <= 5; i++)
             {
                
