@@ -27,9 +27,11 @@ namespace lab_3
             get { return courseCredit; }
         }
 
-        public void Showinfo()
+        public void ShowCourseInfo()
         {
-
+            Console.WriteLine("Course name :" + courseName);
+            Console.WriteLine("Course code :" + courseCode);
+            Console.WriteLine("Course credit :" + courseCredit);
         }
        
     }

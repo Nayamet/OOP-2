@@ -25,8 +25,15 @@ namespace lab_3
             a1.AcId = "1111";
             a1.Balance = 10000;
             a1.Deposite(2000);
+            Console.WriteLine();
             a1.Withdraw(5000);
             Console.WriteLine();
+            Course c1 = new Course();
+            c1.CourseName = "OOP2";
+            c1.CourseCode = "C101";
+            c1.CourseCredit = 3;
+            c1.ShowCourseInfo();
+
         }
     }
 }
