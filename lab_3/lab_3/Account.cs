@@ -27,22 +27,33 @@ namespace lab_3
 
         public void Deposite(int amount)
         {
-            Console.WriteLine("Name : " + accName);
-            Console.WriteLine("Acc ID : " + acId);
-            Console.WriteLine("Balance : " + balance);
-            balance += amount;
-            Console.WriteLine("Deposite Amount : " + amount);
-            Console.WriteLine("Current Balance : " + balance);
+            if (amount > 0)
+            {
+                Console.WriteLine("Name : " + accName);
+                Console.WriteLine("Acc ID : " + acId);
+                Console.WriteLine("Balance : " + balance);
+                balance += amount;
+                Console.WriteLine("Deposite Amount : " + amount);
+                Console.WriteLine("Current Balance : " + balance);
+            }
+            else
+                Console.WriteLine("Deposite unsuccessful.");
+
         }
 
         public void Withdraw(int amount)
         {
-            Console.WriteLine("Name : " + accName);
-            Console.WriteLine("Acc ID : " + acId);
-            Console.WriteLine("Balance : " + balance);
-            balance -= amount;
-            Console.WriteLine("Withdraw Amount : " + amount);
-            Console.WriteLine("Current Balance : " + balance);
+            if (amount > 0 && amount <= balance)
+            {
+                Console.WriteLine("Name : " + accName);
+                Console.WriteLine("Acc ID : " + acId);
+                Console.WriteLine("Balance : " + balance);
+                balance -= amount;
+                Console.WriteLine("Withdraw Amount : " + amount);
+                Console.WriteLine("Current Balance : " + balance);
+            }
+            else
+                Console.WriteLine("Withdraw unsuccessful.");
         }
     }
 }
