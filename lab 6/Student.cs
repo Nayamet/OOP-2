@@ -14,7 +14,7 @@ namespace lab_6
         public int BorrowBookNumber
         {
             get { return borrowBookNumber; }
-            set { borrowBookNumber = value; }
+            set { borrowBookNumber = 0; }
         }
 
         private string name;
@@ -56,13 +56,15 @@ namespace lab_6
             this.id = id;
             this.department = department;
             this.cgpa = cgpa;
+            
         }
         public void AddBorrowBook(Book book)
         {
-            if(borrowBookNumber<5)
+            if(borrowBookNumber<=5)
             {
                 borrowBooks[borrowBookNumber++] = book;
             }
+
            
         }
 

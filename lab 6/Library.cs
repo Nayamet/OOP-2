@@ -8,6 +8,9 @@ namespace lab_6
 {
     class Library
     {
+        Student[] borrowbookStudent;
+        private int i = 0;
+
         private string libName;
 
         public string LibName
@@ -33,6 +36,7 @@ namespace lab_6
         public Library()
         {
             listOfBook = new Book[100];
+            borrowbookStudent = new Student[100];
         }
         public Library(string libName,string libAddress)
         {
@@ -86,11 +90,13 @@ namespace lab_6
         {
             book.AddBookCopy(copy);
         }
+        public void BorrowStudentInfo(Student st)
+        {
 
+            borrowbookStudent[i++] = st;
+        }
 
-
-
-
+        
 
 
     }
