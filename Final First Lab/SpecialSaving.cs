@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_First_Lab
 {
-    class Savings:Account
+    class SpecialSaving:Account
     {
         private int limitOfMonthlyTransaction;
 
@@ -16,29 +16,32 @@ namespace Final_First_Lab
             set { limitOfMonthlyTransaction = value; }
         }
         public int AvailableTransactionLimit { get; set; }
-        public Savings()
-        {
-            Console.WriteLine("Empty savings Constructor.");
-        }
-        public Savings(String accName,string accId,double balance,int limitOfMonthlyTransaction) :base(accName,accId,balance)
-        {
-            this.limitOfMonthlyTransaction = limitOfMonthlyTransaction;
-            AvailableTransactionLimit = limitOfMonthlyTransaction;
+        public double OpeningBalance { get; set; }
 
+        public SpecialSaving()
+        {
+            Console.WriteLine("Empty special savings Constructor.");
+        }
+        public SpecialSaving(String accName, string accId, double balance, int limitOfMonthlyTransaction) : base(accName, accId, balance)
+        {
+            this.limitOfMonthlyTransaction =limitOfMonthlyTransaction;
+            AvailableTransactionLimit = limitOfMonthlyTransaction;
+            OpeningBalance = balance;
         }
 
         public override void Withdraw(int amount)
         {
-            if (AvailableTransactionLimit > 0 && amount <= (Balance - 500))
+            if (AvailableTransactionLimit>0 && amount <= (Balance - (OpeningBalance*20)/100))
             {
                 Balance -= amount;
+                AvailableTransactionLimit--;
                 Console.WriteLine("Withdraw amount : " + amount);
             }
             else
                 Console.WriteLine("Withdraw failed.");
         }
 
-       public override void ShowInfo()
+        public override void ShowInfo()
         {
             Console.WriteLine("Account Holder Name : " + AccountHolderName);
             Console.WriteLine("Account ID : " + AccId);

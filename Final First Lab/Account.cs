@@ -31,12 +31,13 @@ namespace Final_First_Lab
         }
         abstract public void Withdraw(int amount);
         
-        public void Transfer(int amount, Account receiver)
+        virtual public void Transfer(int amount, Account receiver)
         {
             if (amount < Balance)
             {
                 Balance -= amount;
                 receiver.Balance += amount;
+                
             }
             else
                 Console.WriteLine("Transection failed .");

@@ -49,6 +49,8 @@ namespace Final_First_Lab
             Console.WriteLine("Account Holder Name : " + AccountHolderName);
             Console.WriteLine("Account ID : " + AccId);
             Console.WriteLine("Balance : " + Balance);
+            Console.WriteLine("Opening year : " + openingYear);
+            Console.WriteLine("Tenure Year : " + tenureYear);
 
         }
 
