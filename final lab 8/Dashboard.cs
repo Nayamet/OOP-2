@@ -22,5 +22,10 @@ namespace final_lab_8
             new InformationForm().Show();
 
         }
+
+        private void labelDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.labelDashboard.Size = new System.Drawing.Size(293, 32);
             this.labelDashboard.TabIndex = 0;
             this.labelDashboard.Text = "Welcome to Dashboard";
+            this.labelDashboard.Click += new System.EventHandler(this.labelDashboard_Click);
             // 
             // buttonAdd
             // 
