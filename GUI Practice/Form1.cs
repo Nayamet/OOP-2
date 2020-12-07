@@ -31,5 +31,25 @@ namespace GUI_Practice
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name = textBoxName.Text;
+            string mobile = textBoxMobile.Text;
+            string orgName = textBoxOrgNmae.Text;
+            string orgAddress = textBoxOrgAddress.Text;
+            string output = String.Format("Name: {0}\nMobile: {1}\nOrg Name: {2}\nOrg Address:{3}", name, mobile, orgName, orgAddress);
+            richTextOutput.Text = output;
+        }
     }
 }
